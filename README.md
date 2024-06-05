@@ -21,3 +21,13 @@ Task Manager is a web application designed to help users manage their tasks effi
 - User-Friendly Interface
   - Intuitive and easy-to-use interface
   - Responsive design for optimal use on various devices
+
+ # Getting Started
+ ## Prerequisites
+   - Node.js
+   - npm (Node Package Manager)
+## Installation
+  1. Clone the repository
+  ```
+git clone https://github.com/mriduldas07/task-taker.git
+```
