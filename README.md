@@ -28,18 +28,18 @@ Task Manager is a web application designed to help users manage their tasks effi
    - npm (Node Package Manager)
 ## Installation
   1. Clone the repository
-    ```
+  ```
     git clone https://github.com/mriduldas07/task-taker.git
     cd task-taker
-    ```
+  ```
   2. Install dependencies
-    ```
+  ```
     npm install
-    ```
+  ```
   3. Run the application
-     ```
-     npm start
-     ```
+  ```
+    npm start
+  ```
 ## Contributing
 We welcome contributions to improve the Task Manager. Here’s how you can help:
   1. Fork the repository
