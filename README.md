@@ -5,6 +5,6 @@ Task Manager is a web application designed to help users manage their tasks effi
 
 ## Features
 - User Authentication
--   Sign up for a new account
--   Log in with existing credentials
--   Log out to secure the session
+  - Sign up for a new account
+  - Log in with existing credentials
+  - Log out to secure the session
