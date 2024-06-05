@@ -18,3 +18,6 @@ Task Manager is a web application designed to help users manage their tasks effi
     - Status: Define the current status of the task (e.g., To Do, In Progress, Done)
   - Edit Task: Modify the details of an existing task
   - Delete Task: Remove a task permanently
+- User-Friendly Interface
+  - Intuitive and easy-to-use interface
+  - Responsive design for optimal use on various devices
