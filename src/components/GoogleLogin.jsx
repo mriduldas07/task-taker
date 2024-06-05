@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { FcGoogle } from "react-icons/fc";
-import { auth } from "../../firebase.config";
+import { auth } from "../firebase.config";
 
 export default function GoogleLogin() {
   const [signInWithGoogle, user] = useSignInWithGoogle(auth);

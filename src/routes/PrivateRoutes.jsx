@@ -1,8 +1,8 @@
 import { Navigate, useLocation } from "react-router-dom";
 
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase.config";
 import Loading from "../components/Loading";
+import { auth } from "../firebase.config";
 
 // eslint-disable-next-line react/prop-types
 const PrivateRoute = ({ children }) => {

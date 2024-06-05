@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useUpdatePassword } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase.config";
+import { auth } from "../firebase.config";
 
 export default function PasswordChange() {
   const [newPass, setNewPass] = useState("");

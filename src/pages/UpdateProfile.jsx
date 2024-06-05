@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuthState, useUpdateProfile } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
-import { auth } from "../../firebase.config";
+import { auth } from "../firebase.config";
 
 export default function UpdateProfile() {
   const [user] = useAuthState(auth);

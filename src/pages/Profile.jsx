@@ -1,6 +1,6 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
-import { auth } from "../../firebase.config";
+import { auth } from "../firebase.config";
 
 export default function Profile() {
   const [user] = useAuthState(auth);
