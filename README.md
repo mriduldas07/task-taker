@@ -8,3 +8,11 @@ Task Manager is a web application designed to help users manage their tasks effi
   - Sign up for a new account
   - Log in with existing credentials
   - Log out to secure the session
+- Task Management
+  - Create Task: Users can create a new task with the following attributes:
+    - Title: A brief summary of the task
+    - Description: Detailed information about the task
+    - Priority: Set the priority level (e.g., Low, Medium, High)
+    - Status: Define the current status of the task (e.g., To Do, In Progress, Done)
+  - Edit Task: Modify the details of an existing task
+  - Delete Task: Remove a task permanently
