@@ -36,3 +36,18 @@ cd task-taker
   ```
   npm install
 ```
+  3. Run the application
+     ```
+     npm start
+     ```
+
+
+
+
+
+
+
+
+
+
+
