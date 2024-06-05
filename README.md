@@ -8,6 +8,8 @@ Task Manager is a web application designed to help users manage their tasks effi
   - Sign up for a new account
   - Log in with existing credentials
   - Log out to secure the session
+
+ 
 - Task Management
   - Create Task: Users can create a new task with the following attributes:
     - Title: A brief summary of the task
