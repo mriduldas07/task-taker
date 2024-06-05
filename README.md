@@ -30,4 +30,9 @@ Task Manager is a web application designed to help users manage their tasks effi
   1. Clone the repository
   ```
 git clone https://github.com/mriduldas07/task-taker.git
+cd task-taker
+```
+  2. Install dependencies
+  ```
+  npm install
 ```
