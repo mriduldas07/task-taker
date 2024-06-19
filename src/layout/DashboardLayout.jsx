@@ -10,7 +10,7 @@ const DashboardLayout = () => {
             <li
               className={`${
                 pathname === "/dashboard" ? "bg-[#272A30]" : "text-[#828388]"
-              }  px-4 py-2 rounded-lg text-white w-full`}
+              }  px-4 py-2 rounded w-full`}
             >
               <Link to={""}>Dashboard</Link>
             </li>
@@ -41,7 +41,7 @@ const DashboardLayout = () => {
             </li>
           </ul>
         </div>
-        <div className="lg:col-span-10 p-20 bg-[#17181F]">
+        <div className="lg:col-span-10 p-20 bg-[#1a1a25]">
           <Outlet />
         </div>
       </div>

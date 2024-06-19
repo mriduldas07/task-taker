@@ -24,7 +24,7 @@ export default function TaskCard({ data, onDelete }) {
     }
   };
   return (
-    <div className="card min-w-full bg-primary text-primary-content shadow-xl">
+    <div className="card min-w-full bg-[#111120] text-primary-content shadow-xl">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
