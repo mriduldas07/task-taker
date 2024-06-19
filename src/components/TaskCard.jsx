@@ -24,7 +24,7 @@ export default function TaskCard({ data, onDelete }) {
     }
   };
   return (
-    <div className="card min-w-full lg:w-96 bg-primary text-primary-content">
+    <div className="card min-w-full bg-primary text-primary-content shadow-xl">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
@@ -56,13 +56,16 @@ export default function TaskCard({ data, onDelete }) {
           </span>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn bg-green-600">
+          <button className="btn bg-green-500 hover:bg-green-600 text-black">
             <Link to={`edit-task/${_id}`}>
-              <BiEdit size={27} />
+              <BiEdit size={20} />
             </Link>
           </button>
-          <button className="btn bg-red-500" onClick={handleDelete}>
-            <RiDeleteBin4Line size={27} />
+          <button
+            className="btn bg-red-400 text-black hover:bg-red-500"
+            onClick={handleDelete}
+          >
+            <RiDeleteBin4Line size={20} />
           </button>
         </div>
       </div>

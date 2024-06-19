@@ -1,13 +1,16 @@
-import { useLoaderData } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase.config";
 
 const Dashboard = () => {
-  const data = useLoaderData();
-  const countedTask = data.length;
-  const pendingCountedTask = data.filter((d) => d.status === "Pending").length;
-  const priorityCountedTask = data.filter((d) => d.priority === "High").length;
+  // const data = useLoaderData();
+  const [user] = useAuthState(auth);
+  // const countedTask = data.length;
+  // const pendingCountedTask = data.filter((d) => d.status === "Pending").length;
+  // const priorityCountedTask = data.filter((d) => d.priority === "High").length;
   return (
     <div className="">
-      <div className="stats shadow bg-slate-200 block lg:flex w-full">
+      <h1 className="font-bold text-5xl py-5">Hello,{user?.displayName}</h1>
+      {/* <div className="stats shadow bg-slate-200 block lg:flex w-full">
         <div className="stat place-items-center">
           <div className="stat-title text-black text-xl font-semibold">
             Tasks
@@ -33,10 +36,10 @@ const Dashboard = () => {
           <div className="stat-value text-black">{priorityCountedTask}</div>
           <div className="stat-desc text-black">↘︎ 90 (14%)</div>
         </div>
-      </div>
+      </div> */}
       <div className="flex justify-center lg:block">
         <div className="overflow-x-auto mt-10 bg-black w-full lg:w-1/2">
-          <table className="table">
+          {/* <table className="table">
             <thead>
               <tr className="lg:text-2xl">
                 <th>Title</th>
@@ -53,7 +56,7 @@ const Dashboard = () => {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table> */}
         </div>
       </div>
     </div>
