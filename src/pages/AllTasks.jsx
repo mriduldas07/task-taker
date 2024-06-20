@@ -10,7 +10,7 @@ import { useGetTasksQuery } from "../redux/tasks/taskApi";
 export default function AllTasks() {
   const { data, isLoading } = useGetTasksQuery(undefined, {
     refetchOnMountOrArgChange: true,
-    pollingInterval: 3000,
+    pollingInterval: 10000,
   });
   const [taskData, setTaskData] = useState(null);
 
