@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { useAuthState, useUpdateProfile } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
@@ -24,9 +25,7 @@ export default function UpdateProfile() {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((d) => {
-        console.log(d);
-      });
+      .then((d) => {});
   });
 
   const handleSubmit = async (e) => {

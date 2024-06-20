@@ -65,7 +65,12 @@ export default function Navbar() {
       </div>
       <div className="navbar-end pr-4">
         {user ? (
-          <button onClick={async () => await signOut()}>
+          <button
+            onClick={async () => {
+              await signOut();
+              localStorage.removeItem("token");
+            }}
+          >
             <h1 className="text-xl">Log out</h1>
           </button>
         ) : (

@@ -29,7 +29,7 @@ export default function SignUp() {
         .then((res) => res.json())
         // eslint-disable-next-line no-unused-vars
         .then((data) => {
-          console.log(data);
+          localStorage.setItem("token", data?.token);
         });
     }
   });

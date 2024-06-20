@@ -30,7 +30,6 @@ export default function AllTasks() {
   if (isLoading) {
     content = <Loading />;
   }
-  console.log(data);
   if (!isLoading && (taskData?.length === 0 || taskData === null)) {
     content = (
       <h1 className="text-white text-2xl">
