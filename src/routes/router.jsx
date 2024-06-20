@@ -57,12 +57,6 @@ export const router = createBrowserRouter([
             <Dashboard />
           </PrivateRoute>
         ),
-        loader: () =>
-          fetch(`https://task-server-gamma-pied.vercel.app/tasks-user`, {
-            headers: {
-              authorization: token,
-            },
-          }),
       },
       {
         path: "all-tasks",
