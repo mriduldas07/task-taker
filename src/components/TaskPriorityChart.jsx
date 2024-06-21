@@ -31,6 +31,7 @@ export default function TaskPriorityChart({ d }) {
           options={data.options}
           series={data.series}
           type="donut"
+          width={430}
         />
       </div>
       <div id="html-dist"></div>

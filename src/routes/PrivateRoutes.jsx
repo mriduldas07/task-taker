@@ -7,7 +7,7 @@ import { auth } from "../firebase.config";
 // eslint-disable-next-line react/prop-types
 const PrivateRoute = ({ children }) => {
   const [user, loading] = useAuthState(auth);
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   if (loading) {
     return <Loading />;
@@ -17,7 +17,7 @@ const PrivateRoute = ({ children }) => {
     return children;
   }
 
-  return <Navigate to={"/login"} state={{ from: location }} replace />;
+  return <Navigate to={"/login"} replace state={{ from: pathname }} />;
 };
 
 export default PrivateRoute;

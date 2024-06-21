@@ -32,7 +32,7 @@ export default function PieChartComponent({ d }) {
           options={data.options}
           series={data.series}
           type="pie"
-          width={380}
+          width={430}
         />
       </div>
     </div>

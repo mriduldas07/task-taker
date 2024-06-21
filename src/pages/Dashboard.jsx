@@ -46,7 +46,7 @@ const Dashboard = () => {
     <div className="">
       <h1 className="font-bold text-5xl py-5">Hello,{user?.displayName}</h1>
 
-      <div className="flex justify-start items-center w-full gap-10 py-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 py-5">
         <PieChartComponent d={data} />
         <TaskPriorityChart d={priority} />
       </div>
