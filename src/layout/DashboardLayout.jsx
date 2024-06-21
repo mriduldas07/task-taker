@@ -1,3 +1,6 @@
+import { CgProfile } from "react-icons/cg";
+import { IoHomeOutline } from "react-icons/io5";
+import { MdAddTask, MdOutlineSpaceDashboard } from "react-icons/md";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 const DashboardLayout = () => {
@@ -12,7 +15,10 @@ const DashboardLayout = () => {
                 pathname === "/dashboard" ? "bg-[#272A30]" : "text-[#828388]"
               }  px-4 py-2 rounded w-full`}
             >
-              <Link to={""}>Dashboard</Link>
+              <Link to={""} className="flex items-center gap-1 w-fit">
+                <MdOutlineSpaceDashboard size={23} />
+                Dashboard
+              </Link>
             </li>
             <li
               className={`${
@@ -21,7 +27,10 @@ const DashboardLayout = () => {
                   : "text-[#828388]"
               }  px-4 py-2 rounded text w-full`}
             >
-              <Link to={"all-tasks"}>All Tasks</Link>
+              <Link to={"all-tasks"} className="flex items-center gap-2 w-fit">
+                <MdAddTask size={23} />
+                All Tasks
+              </Link>
             </li>
             <li
               className={`${
@@ -30,14 +39,20 @@ const DashboardLayout = () => {
                   : "text-[#828388]"
               }  px-4 py-2 rounded text w-full`}
             >
-              <Link to={"profile"}>Profile</Link>
+              <Link to={"profile"} className="flex items-center gap-2 w-fit">
+                <CgProfile size={23} />
+                Profile
+              </Link>
             </li>
             <li
               className={`${
                 pathname === "/" ? "bg-[#272A30]" : "text-[#828388]"
               }  px-4 py-2 rounded text w-full`}
             >
-              <Link to={"/"}>Home</Link>
+              <Link to={"/"} className="flex items-center gap-2 w-fit">
+                <IoHomeOutline size={23} />
+                Home
+              </Link>
             </li>
           </ul>
         </div>
