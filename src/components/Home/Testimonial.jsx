@@ -25,13 +25,11 @@ export default function Testimonial() {
     testimonials.length
   ).toFixed(1);
   return (
-    <div className="min-h- bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h- bg-[#111120] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center">
-          <h2 className="text-4xl font-extrabold text-gray-900">
-            Client Satisfaction
-          </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <h2 className="text-4xl font-extrabold">Client Satisfaction</h2>
+          <p className="mt-4 text-lg text-gray-100">
             See what our clients have to say about their experience with
             SavenIT.
           </p>
@@ -41,15 +39,13 @@ export default function Testimonial() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md flex flex-col"
+              className="bg-[#20212C] p-6 rounded-lg shadow-md flex flex-col"
             >
-              <p className="text-xl italic text-gray-800 mb-4">
+              <p className="text-xl italic text-gray-100 mb-4">
                 {testimonial.feedback}
               </p>
               <div className="mt-auto">
-                <p className="text-lg font-bold text-gray-900">
-                  {testimonial.name}
-                </p>
+                <p className="text-lg font-bold">{testimonial.name}</p>
                 <div className="flex items-center mt-2">
                   {[...Array(testimonial.rating)].map((star, i) => (
                     <svg
@@ -68,17 +64,13 @@ export default function Testimonial() {
         </div>
 
         <div className="text-center mt-12">
-          <h3 className="text-3xl font-bold text-gray-900">
-            Overall Satisfaction
-          </h3>
-          <div className="mt-4 text-6xl font-extrabold text-indigo-600">
+          <h3 className="text-3xl font-bold">Overall Satisfaction</h3>
+          <div className="mt-4 text-6xl font-extrabold text-[#F59E0B]">
             {averageRating}/5
           </div>
-          <p className="mt-2 text-lg text-gray-600">
-            Based on {testimonials.length} reviews
-          </p>
+          <p className="mt-2 text-lg">Based on all reviews</p>
         </div>
-        <div className="bg-[#042f2e] px-3 py-1 lg:px-8 lg:py-3 lg:text-2xl rounded cursor-pointer font-semibold w-fit">
+        <div className="bg-[#F59E0B] text-black px-3 py-1 lg:px-8 lg:py-3 lg:text-2xl rounded cursor-pointer font-semibold w-fit hover:bg-[#F9731A]">
           <span className="">Leave a review</span>
         </div>
       </div>

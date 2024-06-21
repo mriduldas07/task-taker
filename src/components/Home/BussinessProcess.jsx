@@ -30,10 +30,10 @@ export default function BussinessProcess() {
   ];
 
   return (
-    <div className="min-h-fit bg-[#ecfdf5] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-fit bg-[#111120] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center">
-          <h2 className="text-4xl font-extrabold text-gray-900">
+          <h2 className="text-4xl font-extrabold">
             Our Task Management Process
           </h2>
         </div>
@@ -42,13 +42,11 @@ export default function BussinessProcess() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+              className="bg-[#20212C] p-6 rounded-lg shadow-md flex flex-col items-center text-center"
             >
               <div className="text-6xl">{step.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mt-4">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-gray-600">{step.description}</p>
+              <h3 className="text-2xl font-bold mt-4">{step.title}</h3>
+              <p className="mt-2">{step.description}</p>
             </div>
           ))}
         </div>

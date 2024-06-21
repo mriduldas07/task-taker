@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 export default function About() {
   return (
-    <div className="min-h-screen bg-black py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#111120] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center">
           <h2 className="text-5xl font-extrabold text-white">About SavenIT</h2>
@@ -11,11 +11,11 @@ export default function About() {
           </p>
         </div>
 
-        <section className="bg-white p-8 rounded-lg shadow-md">
+        <section className="bg-[#20212C] p-8 rounded-lg shadow-md">
           <div className="md:flex md:items-center md:justify-between">
             <div className="md:w-1/2">
-              <h3 className="text-4xl font-bold text-gray-900">Our Mission</h3>
-              <p className="mt-4 text-lg text-gray-600">
+              <h3 className="text-4xl font-bold">Our Mission</h3>
+              <p className="mt-4 text-lg">
                 At SavenIT, our mission is to empower individuals and teams to
                 achieve their goals through effective task management. We aim to
                 provide intuitive and powerful tools that enhance productivity
@@ -32,7 +32,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="bg-white p-8 rounded-lg shadow-md">
+        <section className="bg-[#20212C] p-8 rounded-lg shadow-md">
           <div className="md:flex md:items-center md:justify-between">
             <div className="md:w-1/2">
               <img
@@ -42,8 +42,8 @@ export default function About() {
               />
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0 md:pl-8">
-              <h3 className="text-4xl font-bold text-gray-900">Our Team</h3>
-              <p className="mt-4 text-lg text-gray-600">
+              <h3 className="text-4xl font-bold">Our Team</h3>
+              <p className="mt-4 text-lg">
                 We are a group of passionate professionals dedicated to making
                 task management easier and more efficient. Our team is composed
                 of experienced developers, designers, and project managers who
@@ -54,9 +54,9 @@ export default function About() {
           </div>
         </section>
 
-        <section className="bg-white p-8 rounded-lg shadow-md">
-          <h3 className="text-3xl font-bold text-gray-900">Contact Us</h3>
-          <p className="mt-4 text-lg text-gray-600">
+        <section className="bg-[#20212C] p-8 rounded-lg shadow-md">
+          <h3 className="text-3xl font-bold">Contact Us</h3>
+          <p className="mt-4 text-lg">
             Have questions or feedback? We'd love to hear from you! Reach out to
             us at{" "}
             <a

@@ -35,7 +35,7 @@ export default function Tips() {
     },
   ];
   return (
-    <div className="min-h-fit bg-[#042f2e] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-fit bg-[#111120] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         <div>
           <h2 className="text-4xl font-extrabold text-[#f59e0b]">

@@ -26,7 +26,7 @@ export default function OurServices() {
     },
   ];
   return (
-    <div className="min-h-fit bg-[#042f2e] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-fit bg-[#111120] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center">
           <h2 className="text-4xl font-extrabold text-[#f59e0b]">
@@ -42,13 +42,11 @@ export default function OurServices() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+              className="bg-[#20212C] p-6 rounded-lg shadow-md flex flex-col items-center text-center"
             >
               <div className="text-6xl">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mt-4">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-gray-600">{service.description}</p>
+              <h3 className="text-2xl font-bold mt-4">{service.title}</h3>
+              <p className="mt-2 text-gray-100">{service.description}</p>
             </div>
           ))}
         </div>

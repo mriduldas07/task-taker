@@ -28,9 +28,9 @@ export default function Pricing() {
     },
   ];
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-[#111120] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center">
+        <h2 className="text-3xl font-extrabold text-center">
           Choose Your Plan
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
