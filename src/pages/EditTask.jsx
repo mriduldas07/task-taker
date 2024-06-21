@@ -1,16 +1,38 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import Loading from "../components/Loading";
 
 export default function EditTask() {
-  const task = useLoaderData();
-  const [date, setDate] = useState(task.dueDate);
-  const [title, setTitle] = useState(task.title);
-  const [description, setDescription] = useState(task.description);
-  const [priority, setPriority] = useState(task.priority);
-  const [status, setStatus] = useState(task.status);
+  const { id } = useParams();
 
-  const id = task._id;
+  const [loading, setLoading] = useState(false);
+  const [date, setDate] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [priority, setPriority] = useState("");
+  const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setLoading(true);
+    fetch(`https://task-server-gamma-pied.vercel.app/task/${id}`, {
+      headers: {
+        authorization: token,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?._id) {
+          setDate(data?.dueDate);
+          setTitle(data?.title);
+          setDescription(data?.description);
+          setPriority(data?.priority);
+          setStatus(data?.status);
+          setLoading(false);
+        }
+      });
+  }, [id]);
 
   const data = {
     title,
@@ -38,6 +60,10 @@ export default function EditTask() {
         e.target.reset();
       });
   };
+
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <div>
       <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
@@ -140,9 +166,9 @@ export default function EditTask() {
           </div>
           <button
             type="submit"
-            className="w-full bg-black text-white py-2 rounded-md hover:bg-white hover:text-black focus:outline hover:border-[3px] border-black mt-4"
+            className="w-full bg-black text-white py-2 rounded-md border-[3px] transition-colors duration-700 ease-in-out hover:bg-white hover:text-black focus:outline hover:border-[3px] border-black mt-4"
           >
-            Add Task
+            Edit Task
           </button>
         </form>
       </div>

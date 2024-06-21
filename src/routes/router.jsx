@@ -16,7 +16,6 @@ import SignUp from "../pages/SignUp";
 import UpdateProfile from "../pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoutes";
 
-const token = localStorage.getItem("token");
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -105,12 +104,6 @@ export const router = createBrowserRouter([
             <EditTask />
           </PrivateRoute>
         ),
-        loader: ({ params }) =>
-          fetch(`https://task-server-gamma-pied.vercel.app/task/${params.id}`, {
-            headers: {
-              authorization: token,
-            },
-          }),
       },
     ],
   },

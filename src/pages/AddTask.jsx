@@ -137,7 +137,7 @@ export default function AddTask() {
           </div>
           <button
             type="submit"
-            className="w-full bg-black text-white py-2 rounded-md transition-colors duration-700 ease-in-out hover:bg-white hover:text-black focus:outline hover:border-[3px] border-black mt-4"
+            className="w-full bg-black text-white py-2 rounded-md border-[3px] transition-colors duration-700 ease-in-out hover:bg-white hover:text-black focus:outline hover:border-[3px] border-black mt-4"
           >
             Add Task
           </button>

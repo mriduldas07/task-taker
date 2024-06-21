@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { useAuthState, useUpdateProfile } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../firebase.config";
 
 export default function UpdateProfile() {
@@ -9,6 +9,7 @@ export default function UpdateProfile() {
   const [displayName, setDisplayName] = useState(user?.displayName);
   const [photoURL, setPhotoURL] = useState(user?.photoURL);
   const [updateProfile] = useUpdateProfile(auth);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -30,7 +31,10 @@ export default function UpdateProfile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await updateProfile({ displayName, photoURL });
+    const updated = await updateProfile({ displayName, photoURL });
+    if (updated) {
+      navigate("/dashboard/profile");
+    }
   };
   return (
     <div>

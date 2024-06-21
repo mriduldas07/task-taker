@@ -56,13 +56,13 @@ export default function TaskCard({ data, onDelete }) {
           </span>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn bg-green-500 hover:bg-green-600 text-black">
-            <Link to={`edit-task/${_id}`}>
+          <Link to={`edit-task/${_id}`}>
+            <button className="p-3 bg-green-500 hover:bg-green-600 text-black">
               <BiEdit size={20} />
-            </Link>
-          </button>
+            </button>
+          </Link>
           <button
-            className="btn bg-red-400 text-black hover:bg-red-500"
+            className="p-3 bg-red-400 text-black hover:bg-red-500"
             onClick={handleDelete}
           >
             <RiDeleteBin4Line size={20} />
