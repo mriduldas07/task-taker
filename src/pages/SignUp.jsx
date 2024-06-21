@@ -37,7 +37,7 @@ export default function SignUp() {
   const navigate = useNavigate();
 
   if (user) {
-    navigate("/");
+    navigate("/dashboard");
   }
 
   if (loading) {

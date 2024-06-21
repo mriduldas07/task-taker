@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogin from "../components/GoogleLogin";
 import Loading from "../components/Loading";
 import { auth } from "../firebase.config";
@@ -8,6 +8,9 @@ import { auth } from "../firebase.config";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const [signInWithEmailAndPassword, user, loading] =
     useSignInWithEmailAndPassword(auth);
@@ -30,15 +33,10 @@ export default function Login() {
         // eslint-disable-next-line no-unused-vars
         .then((data) => {
           localStorage.setItem("token", data?.token);
+          navigate(from, { replace: true });
         });
     }
   });
-
-  const navigate = useNavigate();
-
-  if (user) {
-    navigate("/");
-  }
 
   if (loading) {
     return <Loading />;
