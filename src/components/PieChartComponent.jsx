@@ -12,10 +12,10 @@ export default function PieChartComponent({ d }) {
       labels: ["Pending", "In Progress", "Completed"],
       responsive: [
         {
-          breakpoint: 480,
+          breakpoint: 580,
           options: {
             chart: {
-              width: 200,
+              width: 300,
             },
             legend: {
               position: "bottom",

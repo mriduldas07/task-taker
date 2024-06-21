@@ -44,9 +44,11 @@ const Dashboard = () => {
 
   return (
     <div className="">
-      <h1 className="font-bold text-5xl py-5">Hello,{user?.displayName}</h1>
+      <h1 className="font-bold text-3xl lg:text-5xl py-5">
+        Hello,{user?.displayName}
+      </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 py-5">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 py-5 mx-auto">
         <PieChartComponent d={data} />
         <TaskPriorityChart d={priority} />
       </div>
